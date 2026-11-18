@@ -36,6 +36,50 @@ My interests span the full data workflow: preparing datasets, building pipelines
 
 > Clean data. Thoughtful models. Useful outcomes.
 
+## Featured Project
+
+<a href="https://jobs.sharmajai.com">
+  <img src="assets/job-portal/thumbnail.png" width="100%" alt="SharmaJai Job Portal: jobs from employers' own career sites, minutes after they're posted, shown on a split-flap departures board" />
+</a>
+
+### [SharmaJai Job Portal](https://jobs.sharmajai.com) &nbsp;·&nbsp; live at jobs.sharmajai.com
+
+A free job portal I built and run for students and early-career job seekers. It reads **526 employers' own career sites** and **43 curated job lists** every 10 to 30 minutes, then shows what most job boards leave out: which employers have sponsored **H-1B visas** (USCIS data), which roles really are **entry level**, and which ones **start right away**. About **200,000 open jobs** across the US, India, Canada and 40+ countries.
+
+<p>
+  <a href="https://jobs.sharmajai.com"><img src="https://img.shields.io/badge/Live%20site-jobs.sharmajai.com-ffc629?style=flat-square&labelColor=121418" alt="Live site" /></a>
+  &nbsp;
+  <a href="https://jobs.sharmajai.com/docs"><img src="https://img.shields.io/badge/Documentation-architecture%20%26%20guide-16324f?style=flat-square" alt="Documentation" /></a>
+  &nbsp;
+  <a href="https://github.com/jai0812/job_portal"><img src="https://img.shields.io/badge/Source-job__portal-30363d?style=flat-square&logo=github&logoColor=white" alt="Source code" /></a>
+</p>
+
+<a href="https://jobs.sharmajai.com">
+  <img src="assets/job-portal/devices.png" width="100%" alt="The portal's home page on a laptop and a phone" />
+</a>
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://jobs.sharmajai.com/jobs"><img src="assets/job-portal/job-list.jpg" alt="The job list filtered to Software Engineering, Early career and the last 24 hours" /></a>
+      <br/><sub><b>The job list.</b> Filter about 150,000 US jobs down to entry-level software roles from the last day in three clicks.</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://jobs.sharmajai.com/docs#architecture"><img src="assets/job-portal/architecture.png" alt="System architecture diagram" /></a>
+      <br/><sub><b>The architecture.</b> Fetchers, a rule-based classifier, SQLite and prebuilt lists served from memory.</sub>
+    </td>
+  </tr>
+</table>
+
+| | What I built |
+| :--- | :--- |
+| **Data engineering** | Adapters for 12 hiring systems (Workday, Oracle, Greenhouse, Lever, Ashby…), GitHub job lists and Job Bank Canada, deduplicated into one store and refreshed all day |
+| **Classification** | Rule-based tagging of experience level (0–2 years = early career), field, H-1B history matched to USCIS legal names, and immediate-start postings |
+| **Performance** | Runs on a free 1 GB cloud server: streaming list builds in short-lived processes cut peak memory from ~500 MB to ~90 MB |
+| **Product** | Public browsing, email sign-up, per-user application tracking and analytics, a startup radar, and full documentation with diagrams |
+
+<sub>Python · FastAPI · SQLite · vanilla JavaScript · Oracle Cloud · Cloudflare Tunnel</sub>
+
 ## Where I Focus
 
 | Field | My Focus |
@@ -46,6 +90,12 @@ My interests span the full data workflow: preparing datasets, building pipelines
 | **Finance & Analytics** | Exploring financial datasets, market trends, and decision-focused analysis |
 
 ## Research & Projects
+
+**Data Engineering · Product**
+
+SharmaJai Job Portal: a live job portal that reads 526 employers' career sites every few minutes and adds H-1B sponsorship history for every US employer.
+
+[Open the live site ↗](https://jobs.sharmajai.com) &nbsp;·&nbsp; [Read how it's built ↗](https://jobs.sharmajai.com/docs)
 
 **Computer Vision · Healthcare**
 
