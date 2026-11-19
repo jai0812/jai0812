@@ -36,7 +36,7 @@ My interests span the full data workflow: preparing datasets, building pipelines
 
 > Clean data. Thoughtful models. Useful outcomes.
 
-## Featured Project
+## Featured Projects
 
 <a href="https://jobs.sharmajai.com">
   <img src="assets/job-portal/thumbnail.png" width="100%" alt="SharmaJai Job Portal: jobs from employers' own career sites, minutes after they're posted, shown on a split-flap departures board" />
@@ -80,6 +80,51 @@ A free job portal I built and run for students and early-career job seekers. It 
 
 <sub>Python · FastAPI · SQLite · vanilla JavaScript · Oracle Cloud · Cloudflare Tunnel</sub>
 
+<br/>
+
+<a href="https://mbta.sharmajai.com">
+  <img src="assets/boston-subway/social-preview.png" width="100%" alt="Boston Subway Replay: a live map of the Blue, Red and Green Lines with the headline 'Every train time is a guess. This shows how good the guess was.'" />
+</a>
+
+### [Boston Subway Replay](https://mbta.sharmajai.com) &nbsp;·&nbsp; live at mbta.sharmajai.com
+
+**How much should you trust a train arrival time?** For every scheduled train on Boston's Blue, Red and
+Green Lines, a machine-learning model predicts the night before not one arrival time but a **likely
+range**, then checks it against when the train really arrived. That's **12.5 million scheduled arrivals**
+over a year of public MBTA data. On four weeks the model never saw, the ranges caught **75–82%** of
+trains against an 80% target. The Red Line model beat the historical baseline by a statistically clear
+margin, and the Green Line loss is reported as measured.
+
+<p>
+  <a href="https://mbta.sharmajai.com"><img src="https://img.shields.io/badge/Live%20site-mbta.sharmajai.com-00843D?style=flat-square&labelColor=121418" alt="Live site" /></a>
+  &nbsp;
+  <a href="https://mbta.sharmajai.com/#/results"><img src="https://img.shields.io/badge/Results-per--line%20benchmark-DA291C?style=flat-square" alt="Results" /></a>
+  &nbsp;
+  <a href="https://github.com/jai0812/boston-transit-reliability"><img src="https://img.shields.io/badge/Source-boston--transit--reliability-30363d?style=flat-square&logo=github&logoColor=white" alt="Source code" /></a>
+</p>
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://mbta.sharmajai.com/#/replay?line=Green"><img src="assets/boston-subway/replay-green.png" alt="Green Line replay at Kenmore: LED countdown with ranges, branch schematic and strip map with moving trains" /></a>
+      <br/><sub><b>The replay.</b> A station sign and LED countdown that show ranges, with every Green Line train moving across the B, C, D and E branches.</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://mbta.sharmajai.com/#/results?line=Red"><img src="assets/boston-subway/results.png" alt="Results page for the Red Line with the benchmark table" /></a>
+      <br/><sub><b>The results.</b> Each line scored once on held-out weeks against a timetable and a historical baseline.</sub>
+    </td>
+  </tr>
+</table>
+
+| | What I built |
+| :--- | :--- |
+| **Data engineering** | Idempotent, checksummed ingestion of 370 days of MBTA LAMP records and 122 timetable versions; DuckDB SQL that rebuilds the scheduled roster (DST, 25:00 times) and left-joins 12.5M arrivals with every failure case reported |
+| **Machine learning** | LightGBM quantile models (10th/50th/90th) per line, split-conformal calibration, time-ordered train/validation/calibration/test splits with leakage checks, and release criteria fixed before the test set was scored |
+| **Evaluation** | MAE, pinball loss, coverage, interval width and interval score by line, branch, station and week, with day-level bootstrap confidence intervals |
+| **Product** | A static React + MapLibre site with a plain-language home page, animated replay maps, a FastAPI read API, CI and auto-deploy to GitHub Pages |
+
+<sub>Python · DuckDB · LightGBM · conformal prediction · FastAPI · React · TypeScript · MapLibre · GitHub Actions</sub>
+
 ## Where I Focus
 
 | Field | My Focus |
@@ -90,6 +135,12 @@ A free job portal I built and run for students and early-career job seekers. It 
 | **Finance & Analytics** | Exploring financial datasets, market trends, and decision-focused analysis |
 
 ## Research & Projects
+
+**Machine Learning · Transit · Uncertainty**
+
+Boston Subway Replay: day-ahead arrival ranges for the Blue, Red and Green Lines, calibrated with conformal prediction and scored on 12.5M scheduled arrivals.
+
+[Open the live site ↗](https://mbta.sharmajai.com) &nbsp;·&nbsp; [Read the code and results ↗](https://github.com/jai0812/boston-transit-reliability)
 
 **Data Engineering · Product**
 
